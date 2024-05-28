@@ -37,11 +37,15 @@ class ViewController: UIViewController {
         }
     }
     func showActivityIndicator() {
-        self.activityIndicator?.startAnimating()
+        DispatchQueue.main.async {
+            self.activityIndicator?.startAnimating()
+        }
     }
     
     func hideActivityIndicator() {
-        self.activityIndicator?.stopAnimating()
+        DispatchQueue.main.async {
+            self.activityIndicator?.stopAnimating()
+        }
     }
     func bindViewModel() {
         viewModel.updateHandler = { [weak self] status in

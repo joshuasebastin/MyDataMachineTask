@@ -22,7 +22,7 @@ class UserListTableViewCell: UITableViewCell {
     }
     func setData(post: UserElement?){
         if let post = post {
-            self.titleLabel?.text = "ID:\(post.id) Title: \(post.title)"
+            self.titleLabel?.text = "ID: \(post.id) \n Title: \(post.title)"
         }
     }
 }
